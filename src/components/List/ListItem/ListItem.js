@@ -12,10 +12,10 @@ function ListItem(props) {
       </div>
       <div className={classes.icons}>
         <span>
-          <DeleteIcon />
+          <DeleteIcon className={classes.deleteIcon} />
         </span>
         <span>
-          <EditIcon />
+          <EditIcon className={classes.editIcon} />
         </span>
       </div>
     </div>

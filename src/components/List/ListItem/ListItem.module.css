@@ -31,3 +31,20 @@
   font-size: 0.95rem;
   color: rgb(104, 104, 104);
 }
+
+.deleteIcon {
+  color: rgb(251, 78, 48);
+  font-size: 1.3rem;
+}
+.deleteIcon:hover {
+  color: red;
+}
+
+.editIcon {
+  color: rgb(86, 86, 252);
+  font-size: 1.3rem;
+}
+
+.editIcon:hover {
+  color: blue;
+}
