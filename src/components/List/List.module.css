@@ -1,7 +1,6 @@
 .header {
   /* border: 3px solid black; */
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   column-gap: 2rem;
@@ -45,7 +44,7 @@
 .listContent {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 .item {
   /* border: 3px solid black; */

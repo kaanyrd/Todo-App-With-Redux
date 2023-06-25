@@ -4,7 +4,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
-  height: 5rem;
+  /* height: 5.5rem; */
+  height: fit-content;
+  padding: 1.5rem 0;
 }
 
 .icons {
@@ -31,7 +33,9 @@
   font-size: 0.95rem;
   color: rgb(104, 104, 104);
 }
-
+.todo {
+  text-transform: capitalize;
+}
 .deleteIcon {
   color: rgb(251, 78, 48);
   font-size: 1.3rem;
@@ -47,4 +51,12 @@
 
 .editIcon:hover {
   color: blue;
+}
+
+@media screen and (max-width: 350px) {
+  .item {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
 }

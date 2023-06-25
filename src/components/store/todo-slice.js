@@ -1,7 +1,38 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialValues = {
-  todos: [],
+  todos: [
+    {
+      id: 1,
+      todo: "Learn React.js",
+      date: "22:45:45 2023/06/25",
+    },
+    {
+      id: 2,
+      todo: "Learn Redux.js",
+      date: "22:45:45 2023/06/26",
+    },
+    {
+      id: 3,
+      todo: "Learn Node.js",
+      date: "22:45:45 2023/06/27",
+    },
+    {
+      id: 4,
+      todo: "Learn Redux Saga",
+      date: "22:45:45 2023/06/27",
+    },
+    {
+      id: 5,
+      todo: "Learn Redux Thunk",
+      date: "22:45:45 2023/06/28",
+    },
+    {
+      id: 6,
+      todo: "Learn Express.js",
+      date: "22:45:45 2023/06/29",
+    },
+  ],
 };
 
 const todoSlice = createSlice({
@@ -14,7 +45,10 @@ const todoSlice = createSlice({
     clearAll(state) {
       state.todos = [];
     },
-    delete() {},
+    delete(state, action) {
+      const deletedItem = action.payload;
+      state.todos = state.todos.filter((item) => item.id !== deletedItem);
+    },
   },
 });
 

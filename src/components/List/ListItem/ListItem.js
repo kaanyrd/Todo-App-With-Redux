@@ -1,23 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./ListItem.module.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import { todoActions } from "../../store/todo-slice";
+import { useDispatch } from "react-redux";
+import ListModal from "./ListModal/ListModal";
 
 function ListItem(props) {
+  const dispatch = useDispatch();
+  const [modal, setModal] = useState(false);
+
+  const deleteItemHandler = (id) => {
+    dispatch(todoActions.delete(id));
+  };
+
+  const modalHandler = () => {
+    setModal(true);
+  };
+  console.log(modal);
+
   return (
-    <div className={`${props.className} ${classes.item}`}>
-      <div className={classes.cardInfo}>
-        <h3>{props.todo}</h3>
-        <p className={classes.date}>{props.date}</p>
+    <div>
+      <div className={`${props.className} ${classes.item}`}>
+        <div className={classes.cardInfo}>
+          <h3 className={classes.todo}>{props.todo}</h3>
+          <p className={classes.date}>{props.date}</p>
+        </div>
+        <div className={classes.icons}>
+          <span>
+            <DeleteIcon
+              onClick={() => deleteItemHandler(props.id)}
+              className={classes.deleteIcon}
+            />
+          </span>
+          <span>
+            <EditIcon onClick={modalHandler} className={classes.editIcon} />
+          </span>
+        </div>
       </div>
-      <div className={classes.icons}>
-        <span>
-          <DeleteIcon className={classes.deleteIcon} />
-        </span>
-        <span>
-          <EditIcon className={classes.editIcon} />
-        </span>
-      </div>
+      {modal && (
+        <ListModal
+          modal={modal}
+          setModal={setModal}
+          todo={props.todo}
+          date={props.date}
+        />
+      )}
     </div>
   );
 }
