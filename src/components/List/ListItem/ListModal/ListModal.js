@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 import classes from "./ListModal.module.css";
+import { useDispatch } from "react-redux";
+import { todoActions } from "../../../store/todo-slice";
+import moment from "moment";
 
 function ListModal(props) {
+  const newTodo = useRef();
+  const dispacth = useDispatch();
+  const genereateDate = () => {
+    const date = moment().format("HH:mm:ss YYYY/MM/DD");
+    return date;
+  };
   const onCloseModalHandler = () => {
     props.setModal(false);
   };
-
-  console.log(props.modal);
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    dispacth(
+      todoActions.editTodo({
+        id: props.id,
+        todo: newTodo.current.value,
+        date: genereateDate(),
+      })
+    );
+    props.setModal(false);
+    newTodo.current.value = "";
+  };
 
   return (
     // FIXME
@@ -27,10 +46,17 @@ function ListModal(props) {
             <label>
               <h2>New Todo</h2>
             </label>
-            <input placeholder="new todo..." type="text" />
+            <input
+              maxLength="23"
+              ref={newTodo}
+              placeholder="new todo..."
+              type="text"
+            />
           </div>
           <div className={classes.submitBtn}>
-            <button type="submit">apply !</button>
+            <button onClick={onSubmitHandler} type="submit">
+              apply !
+            </button>
           </div>
         </form>
         <div className={classes.modalContent}>

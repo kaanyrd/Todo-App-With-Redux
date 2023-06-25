@@ -45,6 +45,15 @@ const todoSlice = createSlice({
     clearAll(state) {
       state.todos = [];
     },
+    editTodo(state, action) {
+      const updatedTodo = action.payload;
+      const todoIndex = state.todos.findIndex(
+        (todo) => todo.id === updatedTodo.id
+      );
+      if (todoIndex !== -1) {
+        state.todos[todoIndex] = updatedTodo;
+      }
+    },
     delete(state, action) {
       const deletedItem = action.payload;
       state.todos = state.todos.filter((item) => item.id !== deletedItem);

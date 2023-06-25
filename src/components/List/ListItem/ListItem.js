@@ -40,6 +40,7 @@ function ListItem(props) {
       </div>
       {modal && (
         <ListModal
+          id={props.id}
           modal={modal}
           setModal={setModal}
           todo={props.todo}
