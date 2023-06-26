@@ -1,9 +1,9 @@
 .app {
-  /* background: #fff;*/
-  /* background: #efefef; */
-  /* background: rgba(30, 30, 30, 1); */
   transition: all 0.3s linear;
   min-height: 100vh;
+}
+.mainContent {
+  padding: 0 0 2rem 0;
 }
 
 .bg1 {

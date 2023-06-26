@@ -1,29 +1,26 @@
 .item {
-  /* border: 3px solid green; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
-  /* height: 5.5rem; */
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 1.5rem 0.2rem;
 }
 
 .icons {
-  /* border: 3px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
+  -moz-column-gap: 0.5rem;
   column-gap: 0.5rem;
 }
-.icons > * {
-  /* border: 3px solid red; */
-}
+
 .icons > span {
   cursor: pointer;
 }
 .cardInfo {
-  /* border: 3px solid black; */
   display: flex;
   flex-direction: column;
   row-gap: 0.7rem;
@@ -35,6 +32,7 @@
 }
 .todo {
   text-transform: capitalize;
+  color: black;
 }
 .deleteIcon {
   color: rgb(251, 78, 48);

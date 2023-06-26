@@ -17,7 +17,6 @@ function ListItem(props) {
   const modalHandler = () => {
     setModal(true);
   };
-  console.log(modal);
 
   return (
     <div>

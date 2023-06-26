@@ -6,13 +6,16 @@ function Header() {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const changeThemeHandler = (data) => {
-    console.log(data);
     setTheme(data);
   };
 
   return (
     <div className={classes.navbar}>
-      <div className={classes.navbarContent}>
+      <div
+        className={`${classes.navbarContent} ${
+          theme === "bg5" ? classes.activeNavbar : ""
+        }`}
+      >
         <h1>todo app</h1>
         <div className={classes.theme}>
           <h3>Themes</h3>

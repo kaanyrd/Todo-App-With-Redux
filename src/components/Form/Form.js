@@ -1,10 +1,12 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import classes from "./Form.module.css";
 import { useDispatch } from "react-redux";
 import { todoActions } from "../store/todo-slice";
 import moment from "moment";
+import ThemeContext from "../context/ThemeContext";
 
 function Form() {
+  const { theme } = useContext(ThemeContext);
   const dispatch = useDispatch();
   const todoRef = useRef();
   const genereateDate = () => {
@@ -24,14 +26,17 @@ function Form() {
           date: genereateDate(),
         })
       );
-      console.log(todoRef.current.value);
       todoRef.current.value = "";
     }
   };
 
   return (
     <div className={classes.form}>
-      <div className={classes.formContent}>
+      <div
+        className={`${classes.formContent} ${
+          theme === "bg5" ? classes.activeForm : ""
+        }`}
+      >
         <form onSubmit={addTaskHandler} className={classes.formSelf}>
           <input
             ref={todoRef}
