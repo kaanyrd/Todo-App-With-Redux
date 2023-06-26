@@ -16,15 +16,19 @@ function ListModal(props) {
   };
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    dispacth(
-      todoActions.editTodo({
-        id: props.id,
-        todo: newTodo.current.value,
-        date: genereateDate(),
-      })
-    );
-    props.setModal(false);
-    newTodo.current.value = "";
+    if (newTodo.current.value.trim().length !== 0) {
+      dispacth(
+        todoActions.editTodo({
+          id: props.id,
+          todo: newTodo.current.value,
+          date: genereateDate(),
+        })
+      );
+      props.setModal(false);
+      newTodo.current.value = "";
+    } else {
+      props.setModal(false);
+    }
   };
 
   return (

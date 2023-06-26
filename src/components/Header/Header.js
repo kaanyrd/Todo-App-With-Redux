@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Header.module.css";
+import ThemeContext from "../context/ThemeContext";
 
 function Header() {
+  const { theme, setTheme } = useContext(ThemeContext);
+
+  const changeThemeHandler = (data) => {
+    console.log(data);
+    setTheme(data);
+  };
+
   return (
     <div className={classes.navbar}>
       <div className={classes.navbarContent}>
@@ -9,13 +17,36 @@ function Header() {
         <div className={classes.theme}>
           <h3>Themes</h3>
           <div>
-            <button className={`${classes.btn1} ${classes.activeBtn}`}>
-              1
-            </button>
-            <button className={classes.btn2}>2</button>
-            <button className={classes.btn3}>3</button>
-            <button className={classes.btn4}>4</button>
-            <button className={classes.btn5}>5</button>
+            <button
+              onClick={() => changeThemeHandler("bg1")}
+              className={`${classes.btn1} ${
+                theme === "bg1" ? classes.activeBtn : ""
+              }`}
+            ></button>
+            <button
+              onClick={() => changeThemeHandler("bg2")}
+              className={`${classes.btn2} ${
+                theme === "bg2" ? classes.activeBtn : ""
+              }`}
+            ></button>
+            <button
+              onClick={() => changeThemeHandler("bg3")}
+              className={`${classes.btn3} ${
+                theme === "bg3" ? classes.activeBtn : ""
+              }`}
+            ></button>
+            <button
+              onClick={() => changeThemeHandler("bg4")}
+              className={`${classes.btn4} ${
+                theme === "bg4" ? classes.activeBtn : ""
+              }`}
+            ></button>
+            <button
+              onClick={() => changeThemeHandler("bg5")}
+              className={`${classes.btn5} ${
+                theme === "bg5" ? classes.activeBtn : ""
+              }`}
+            ></button>
           </div>
         </div>
       </div>

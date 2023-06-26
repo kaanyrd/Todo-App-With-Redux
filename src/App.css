@@ -1,4 +1,28 @@
 .app {
-  background: #ededee;
+  /* background: #fff;*/
+  /* background: #efefef; */
+  /* background: rgba(30, 30, 30, 1); */
+  transition: all 0.3s linear;
   min-height: 100vh;
+}
+
+.bg1 {
+  background: url("./Assets/1.jpg") center/cover no-repeat;
+  height: 100%;
+}
+.bg2 {
+  background: url("./Assets/2.jpg") center/cover no-repeat;
+  height: 100%;
+}
+.bg3 {
+  background: url("./Assets/3.png") center/cover no-repeat;
+  height: 100%;
+}
+.bg4 {
+  background: url("./Assets/4.jpg") center/cover no-repeat;
+  height: 100%;
+}
+.bg5 {
+  background: url("./Assets/5.PNG") center/cover no-repeat;
+  height: 100%;
 }

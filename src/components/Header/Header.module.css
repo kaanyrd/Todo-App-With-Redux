@@ -4,6 +4,9 @@
 }
 .navbarContent {
   background-color: #fff;
+  /* background-color: transparent; */
+  /* color: white; */
+  border: 3px solid white;
   padding: 0.825rem;
   /* border: 3px solid red; */
   border-radius: 10px;
@@ -16,7 +19,8 @@
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 1rem;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); */
   /* border: 3px solid #afafaf; */
   /* outline: 2px solid rgb(177, 176, 176); */
   /* outline-offset: 5px; */
@@ -46,6 +50,24 @@
 .btn4,
 .btn5 {
   border: none;
+  width: 2rem;
+  height: 2rem;
+}
+.btn1 {
+  border: 1px solid black;
+  background: url("../../Assets/1.jpg") center/cover no-repeat;
+}
+.btn2 {
+  background: url("../../Assets/2.jpg") center/cover no-repeat;
+}
+.btn3 {
+  background: url("../../Assets/3.png") center/cover no-repeat;
+}
+.btn4 {
+  background: url("../../Assets/4.jpg") center/cover no-repeat;
+}
+.btn5 {
+  background: url("../../Assets/5.PNG") center/cover no-repeat;
 }
 .theme > div > button {
   border-radius: 50%;
@@ -55,7 +77,6 @@
 }
 .activeBtn {
   transform: scale(1.2);
-  border: 1px solid black;
 }
 
 @media screen and (min-width: 678px) {

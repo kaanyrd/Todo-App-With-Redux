@@ -11,7 +11,6 @@ function List() {
   const clearAllHandler = () => {
     disptach(todoActions.clearAll());
   };
-
   return (
     <div className={classes.list}>
       <div className={classes.header}>
@@ -25,19 +24,18 @@ function List() {
       </div>
       <div className={classes.underline}></div>
       <div className={classes.listContent}>
-        {todos.length === 0 ? (
-          <h2 className={classes.alert}>No Todos...</h2>
-        ) : (
-          todos?.map((item) => (
-            <ListItem
-              key={item.id}
-              className={classes.item}
-              id={item.id}
-              todo={item.todo}
-              date={item.date}
-            />
-          ))
-        )}
+        {todos?.map((item) => (
+          <ListItem
+            key={item.id}
+            className={classes.item}
+            id={item.id}
+            todo={item.todo}
+            date={item.date}
+          />
+        ))}
+      </div>
+      <div className={classes.todoAlert}>
+        {todos.length === 0 ? <h2>No Todos..</h2> : ""}
       </div>
     </div>
   );

@@ -3,9 +3,10 @@
   margin: 2rem 0;
 }
 .formContent {
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   /* border: 3px solid red; */
   background-color: #fff;
+  /* background-color: transparent; */
   border-radius: 10px;
   max-width: fit-content;
   width: 90vw;

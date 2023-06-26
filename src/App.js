@@ -2,16 +2,19 @@ import React from "react";
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
 import List from "./components/List/List";
-import "./App.css";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import ThemeWrapper from "./components/context/ThemeWrapper";
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      {/* <hr /> */}
-      <Form />
-      {/* <hr /> */}
-      <List />
+    <div>
+      <ThemeContextProvider>
+        <ThemeWrapper>
+          <Header />
+          <Form />
+          <List />
+        </ThemeWrapper>
+      </ThemeContextProvider>
     </div>
   );
 }
