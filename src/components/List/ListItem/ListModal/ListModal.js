@@ -70,7 +70,7 @@ function ListModal(props) {
             </div>
           </form>
           <div className={classes.modalContent}>
-            <h2>- {props.todo}</h2>
+            <h2 className={classes.todoSelf}>- {props.todo}</h2>
             <hr />
             <h4>{props.date}</h4>
           </div>
