@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import classes from "./Header.module.css";
 import ThemeContext from "../context/ThemeContext";
 
@@ -8,6 +8,10 @@ function Header() {
   const changeThemeHandler = (data) => {
     setTheme(data);
   };
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
+  }, [theme]);
 
   return (
     <div className={classes.navbar}>

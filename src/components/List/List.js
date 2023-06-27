@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import classes from "./List.module.css";
 import ListItem from "./ListItem/ListItem";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,10 +9,14 @@ function List() {
   const { theme } = useContext(ThemeContext);
   const todos = useSelector((state) => state.todo.todos);
   const disptach = useDispatch();
-
+  console.log(todos);
   const clearAllHandler = () => {
     disptach(todoActions.clearAll());
   };
+  useEffect(() => {
+    localStorage.setItem("items", JSON.stringify(todos));
+  }, [todos]);
+
   return (
     <div
       className={`${classes.list} ${theme === "bg5" ? classes.activeList : ""}`}

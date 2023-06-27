@@ -23,8 +23,8 @@ function ListItem(props) {
       <div className={`${props.className} ${classes.item}`}>
         <div className={classes.cardInfo}>
           <h3 className={classes.todo}>
-            <h3 className={classes.underline}>{props.index + 1}-</h3>
-            <h3>{props.todo}</h3>
+            <p className={classes.underline}>{props.index + 1}-</p>
+            <p>{props.todo}</p>
           </h3>
           <p className={classes.date}>{props.date}</p>
         </div>
@@ -43,6 +43,7 @@ function ListItem(props) {
       {modal && (
         <ListModal
           id={props.id}
+          key={props.id}
           modal={modal}
           setModal={setModal}
           todo={props.todo}
