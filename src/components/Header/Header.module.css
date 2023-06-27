@@ -88,3 +88,9 @@
     justify-content: space-between;
   }
 }
+
+@media screen and (max-width: 678px) {
+  .btn5 {
+    background: url("../../Assets/mobile.jpg") center/cover no-repeat;
+  }
+}

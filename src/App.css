@@ -26,3 +26,8 @@
   background: url("./Assets/5.PNG") center/cover no-repeat;
   height: 100%;
 }
+@media screen and (max-width: 678px) {
+  .bg5 {
+    background: url("./Assets/mobile.jpg") center/cover no-repeat;
+  }
+}
