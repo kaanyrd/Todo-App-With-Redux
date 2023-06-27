@@ -1,2 +1,3 @@
-# Watch Live (not done!)
+# I developed a Todo-App with Redux...
+# For link:
 ## https://kaanyrd-todoapp.netlify.app
