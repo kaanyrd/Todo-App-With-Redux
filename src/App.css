@@ -1,9 +1,7 @@
 .app {
   transition: all 0.3s linear;
   min-height: 100vh;
-}
-.mainContent {
-  padding: 0 0 2rem 0;
+  padding-bottom: 1rem;
 }
 
 .bg1 {
