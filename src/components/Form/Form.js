@@ -43,7 +43,7 @@ function Form() {
             placeholder="Add Task..."
             className={classes.input}
             type="text"
-            maxLength="23"
+            maxLength="20"
           />
           <button className={classes.submitBtn}>ADD</button>
         </form>

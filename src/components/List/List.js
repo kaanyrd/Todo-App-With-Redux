@@ -34,10 +34,11 @@ function List() {
       </div>
       <div className={classes.underline}></div>
       <div className={classes.listContent}>
-        {todos?.map((item) => (
+        {todos?.map((item, index) => (
           <ListItem
             key={item.id}
             className={classes.item}
+            index={index}
             id={item.id}
             todo={item.todo}
             date={item.date}

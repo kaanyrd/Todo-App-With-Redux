@@ -9,22 +9,27 @@
 .bg1 {
   background: url("./Assets/1.jpg") center/cover no-repeat;
   height: 100%;
+  padding-bottom: 1rem;
 }
 .bg2 {
   background: url("./Assets/2.jpg") center/cover no-repeat;
   height: 100%;
+  padding-bottom: 1rem;
 }
 .bg3 {
   background: url("./Assets/3.png") center/cover no-repeat;
   height: 100%;
+  padding-bottom: 1rem;
 }
 .bg4 {
   background: url("./Assets/4.jpg") center/cover no-repeat;
   height: 100%;
+  padding-bottom: 1rem;
 }
 .bg5 {
   background: url("./Assets/5.PNG") center/cover no-repeat;
   height: 100%;
+  padding-bottom: 1rem;
 }
 @media screen and (max-width: 678px) {
   .bg5 {

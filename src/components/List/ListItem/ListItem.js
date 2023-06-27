@@ -22,7 +22,10 @@ function ListItem(props) {
     <div>
       <div className={`${props.className} ${classes.item}`}>
         <div className={classes.cardInfo}>
-          <h3 className={classes.todo}>{props.todo}</h3>
+          <h3 className={classes.todo}>
+            <h3 className={classes.underline}>{props.index + 1}-</h3>
+            <h3>{props.todo}</h3>
+          </h3>
           <p className={classes.date}>{props.date}</p>
         </div>
         <div className={classes.icons}>
