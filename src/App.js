@@ -7,7 +7,7 @@ import ThemeWrapper from "./components/context/ThemeWrapper";
 
 function App() {
   return (
-    <div className="main-app">
+    <div>
       <ThemeContextProvider>
         <ThemeWrapper>
           <Header />
